@@ -4,40 +4,38 @@ import type { GalleryItem } from "@/types";
 const sampleGalleryItems: GalleryItem[] = [
   {
     id: "gal-1",
-    title: "violendgroove — Live at Warehouse 23",
-    embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: "violendgroove — Live from Vienna",
+    embedUrl: "https://www.youtube.com/embed/NIxtVibuNz4?si=G8Sjb2BeAXOZnZ58",
     platform: "youtube",
   },
   {
     id: "gal-2",
-    title: "Deep House Mix — Summer 2025",
-    embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: "Frankie Bones at VG presents S1Brooklyn, NYC",
+   embedUrl: "https://www.youtube.com/embed/NIxtVibuNz4?si=G8Sjb2BeAXOZnZ58",
     platform: "youtube",
   },
   {
     id: "gal-3",
     title: "GROOVE VOL. 1 — Full Album",
-    embedUrl:
-      "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123456789&color=%23a855f7&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false",
+    embedUrl: "https://www.youtube.com/embed/NIxtVibuNz4?si=G8Sjb2BeAXOZnZ58",
     platform: "soundcloud",
   },
   {
     id: "gal-4",
-    title: "Studio Session — Behind the Scenes",
-    embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: "Bright O at VG Postgarage",
+embedUrl: "https://www.youtube.com/embed/NIxtVibuNz4?si=G8Sjb2BeAXOZnZ58",
     platform: "youtube",
   },
   {
     id: "gal-5",
-    title: "Techno Essentials Mix",
-    embedUrl:
-      "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/987654321&color=%23a855f7&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false",
-    platform: "soundcloud",
+    title: "VG Summer Session 2024 recap",
+   embedUrl: "https://www.youtube.com/embed/NIxtVibuNz4?si=G8Sjb2BeAXOZnZ58",
+    platform: "youtube",
   },
   {
     id: "gal-6",
     title: "violendgroove — Festival Aftermovie",
-    embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+embedUrl: "https://www.youtube.com/embed/NIxtVibuNz4?si=G8Sjb2BeAXOZnZ58",
     platform: "youtube",
   },
 ];
