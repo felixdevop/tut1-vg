@@ -27,14 +27,12 @@ export interface GalleryItem {
 export interface EventItem {
   id: string;
   title: string;
-  date: string; // ISO date string
+  date: string; // ISO date string, e.g. "2026-03-15"
   venue: string;
-  location: string;
-  ticketUrl?: string;
-  description?: string;
+  location: string; // e.g. "Berlin, DE"
+  ticketUrl?: string; // optional link to tickets
 }
 
 export interface UserPreferences {
   favoriteProductIds: string[];
-  favoriteEventIds: string[];
 }

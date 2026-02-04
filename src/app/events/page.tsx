@@ -1,80 +1,53 @@
-"use client";
+import Link from "next/link";
+import type { EventItem } from "@/types";
 
-import { useLocalStorage } from "@/hooks/useLocalStorage";
-import { STORAGE_KEYS } from "@/lib/constants";
-import EventList from "@/components/events/EventList";
-import type { EventItem, UserPreferences } from "@/types";
-
-const sampleEvents: EventItem[] = [
+// ── Manually maintained list of upcoming events ──────────────────────
+const UPCOMING_EVENTS: EventItem[] = [
   {
     id: "evt-1",
-    title: "violendgroove — Warehouse Rave",
-    date: "2026-03-15T22:00:00",
-    venue: "Warehouse 23",
-    location: "Berlin, Germany",
-    ticketUrl: "#",
-    description: "An all-night underground experience. Expect heavy bass and relentless energy.",
+    title: "Verzus Clubnight 1 2026",
+    date: "2026-03-13",
+    venue: "Postgarage 2nd",
+    location: "Graz, AT",
+    ticketUrl: "https://ra.co/events/123456",
   },
   {
     id: "evt-2",
-    title: "Deep Cuts — Rooftop Session",
-    date: "2026-04-05T19:00:00",
-    venue: "Skyline Terrace",
-    location: "Amsterdam, Netherlands",
-    ticketUrl: "#",
-    description: "Sunset grooves on the rooftop. Deep house and soulful beats.",
+    title: "Springfestival 2026 Verzus 2 2026",
+    date: "2026-05-23",
+    venue: "Dom im Berg",
+    location: "Graz, AT",
+    ticketUrl: "https://ra.co/events/123456",
   },
   {
     id: "evt-3",
-    title: "GROOVE Festival 2026",
-    date: "2026-06-20T14:00:00",
-    venue: "Riverside Park",
-    location: "London, UK",
-    ticketUrl: "#",
-    description: "The annual gathering. Multiple stages, all-day music.",
+    title: "Verzus Clubnight 3 2026",
+    date: "2026-10-03",
+    venue: "Postgarage 2nd",
+    location: "Graz, AT",
+    ticketUrl: "https://ra.co/events/123456",
   },
-  {
-    id: "evt-4",
-    title: "Club Night — Residency",
-    date: "2026-05-10T23:00:00",
-    venue: "Basement Club",
-    location: "Paris, France",
-    ticketUrl: "#",
-  },
-  {
-    id: "evt-5",
-    title: "violendgroove x Friends — B2B Night",
-    date: "2026-07-18T21:00:00",
-    venue: "The Bunker",
-    location: "New York, USA",
-    ticketUrl: "#",
-    description: "Back-to-back sets with special guests. One night only.",
-  },
+  // {
+  //   id: "evt-4",
+  //   title: "Feuer & Peitsche #2",
+  //   date: "2026-12-04",
+  //   venue: "Postgarage",
+  //   location: "Graz, AT",
+  //   ticketUrl: "https://ra.co/events/123456",
+  // },
 ];
 
-const defaultPrefs: UserPreferences = {
-  favoriteProductIds: [],
-  favoriteEventIds: [],
-};
+function formatDate(iso: string): string {
+  const d = new Date(iso + "T00:00:00");
+  return d.toLocaleDateString("en-GB", {
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+}
 
 export default function EventsPage() {
-  const [prefs, setPrefs] = useLocalStorage<UserPreferences>(
-    STORAGE_KEYS.FAVORITES,
-    defaultPrefs
-  );
-
-  const toggleFavorite = (eventId: string) => {
-    setPrefs((prev) => {
-      const ids = prev.favoriteEventIds;
-      return {
-        ...prev,
-        favoriteEventIds: ids.includes(eventId)
-          ? ids.filter((id) => id !== eventId)
-          : [...ids, eventId],
-      };
-    });
-  };
-
   return (
     <div className="mx-auto max-w-7xl px-4 py-12">
       <div className="mb-10">
@@ -82,15 +55,58 @@ export default function EventsPage() {
           Events
         </h1>
         <p className="text-text-muted">
-          Find us at a venue near you. Upcoming shows and tickets.
+          Upcoming shows and tickets for events near you.
         </p>
       </div>
 
-      <EventList
-        events={sampleEvents}
-        favoriteIds={prefs.favoriteEventIds}
-        onToggleFavorite={toggleFavorite}
-      />
+      {UPCOMING_EVENTS.length > 0 ? (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {UPCOMING_EVENTS.map((event) => (
+            <div
+              key={event.id}
+              className="rounded-xl border border-border bg-surface p-5 transition-colors hover:border-accent"
+            >
+              <p className="mb-1 text-sm font-medium text-accent">
+                {formatDate(event.date)}
+              </p>
+              <h2 className="mb-2 text-lg font-bold text-text">
+                {event.title}
+              </h2>
+              <p className="text-sm text-text-muted">
+                {event.venue} &middot; {event.location}
+              </p>
+              {event.ticketUrl && (
+                <Link
+                  href={event.ticketUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-block text-sm font-semibold text-accent hover:underline"
+                >
+                  Tickets &rarr;
+                </Link>
+              )}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="rounded-xl border border-border bg-surface px-6 py-16 text-center">
+          <p className="text-text-muted">
+            No upcoming events right now. Check back soon!
+          </p>
+        </div>
+      )}
+      <hr className="mt-8"/>
+
+      <div className="mt-6 text-center">
+        <Link
+          href="https://ra.co/promoters/116162"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-accent hover:underline"
+        >
+          View all events on RA &rarr;
+        </Link>
+      </div>
     </div>
   );
 }

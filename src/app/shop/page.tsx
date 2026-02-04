@@ -58,7 +58,6 @@ const sampleProducts: Product[] = [
 
 const defaultPrefs: UserPreferences = {
   favoriteProductIds: [],
-  favoriteEventIds: [],
 };
 
 export default function ShopPage() {
