@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import Navbar from "@/components/layout/Navbar";
-import { CartSidebar } from "@/components/shop/CartSidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +22,6 @@ export default function RootLayout({
       <body className={`${inter.className} bg-bg text-text antialiased`}>
         <CartProvider>
           <Navbar />
-          <CartSidebar />
           <main className="min-h-screen">{children}</main>
         </CartProvider>
       </body>

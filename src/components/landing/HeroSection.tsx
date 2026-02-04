@@ -15,7 +15,7 @@ export default function HeroSection() {
           <span className="text-primary">groove</span>
         </h1>
         <p className="mx-auto mb-8 max-w-lg text-lg text-text-muted md:text-xl">
-          Music. Beats. Culture.
+          Music. Events. Culture.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a
