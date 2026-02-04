@@ -18,12 +18,14 @@ export default function HeroSection() {
           Music. Beats. Culture.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <Link
-            href="/shop"
+          <a
+            href="https://leftkiss.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-lg bg-primary px-8 py-3 font-semibold text-white transition-colors hover:bg-primary-hover"
           >
             Shop Now
-          </Link>
+          </a>
           <Link
             href="/events"
             className="rounded-lg border border-border px-8 py-3 font-semibold text-text-muted transition-colors hover:border-primary hover:text-primary"

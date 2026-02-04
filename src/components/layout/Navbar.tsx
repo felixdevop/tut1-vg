@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useCart } from "@/context/CartContext";
 
 const navLinks = [
-  { href: "/shop", label: "Shop" },
+  { href: "https://leftkiss.com/", label: "Shop", external: true },
   { href: "/gallery", label: "Gallery" },
   { href: "/events", label: "Events" },
 ];
@@ -29,17 +29,29 @@ export default function Navbar() {
 
         {/* Desktop links */}
         <div className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                pathname === link.href ? "text-primary" : "text-text-muted"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.external ? (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-text-muted transition-colors hover:text-primary"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  pathname === link.href ? "text-primary" : "text-text-muted"
+                }`}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
 
           {/* Cart button */}
           <button
@@ -140,18 +152,31 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="border-t border-border px-4 pb-4 md:hidden">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className={`block py-3 text-sm font-medium transition-colors hover:text-primary ${
-                pathname === link.href ? "text-primary" : "text-text-muted"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.external ? (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block py-3 text-sm font-medium text-text-muted transition-colors hover:text-primary"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`block py-3 text-sm font-medium transition-colors hover:text-primary ${
+                  pathname === link.href ? "text-primary" : "text-text-muted"
+                }`}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </div>
       )}
     </nav>
