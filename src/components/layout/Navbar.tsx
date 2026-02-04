@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -18,11 +19,15 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
         {/* Logo */}
-        <Link
-          href="/"
-          className="text-xl font-bold tracking-tight text-primary transition-colors hover:text-primary-hover"
-        >
-          violendgroove
+        <Link href="/">
+          <Image
+            src="/vglogo.svg"
+            alt="violendgroove"
+            width={120}
+            height={32}
+            className="mb-4 h-8 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop links */}

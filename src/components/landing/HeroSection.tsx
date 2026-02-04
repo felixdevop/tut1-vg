@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroSection() {
@@ -10,10 +11,14 @@ export default function HeroSection() {
       <div className="absolute left-1/2 top-1/3 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 blur-[128px]" />
 
       <div className="relative z-10 px-4 text-center">
-        <h1 className="mb-4 text-6xl font-black tracking-tighter text-text md:text-8xl lg:text-9xl">
-          violend
-          <span className="text-primary">groove</span>
-        </h1>
+        <Image
+          src="/vglogo.svg"
+          alt="violendgroove"
+          width={600}
+          height={150}
+          className="mx-auto mb-24 h-auto w-full max-w-xl md:max-w-2xl lg:max-w-4xl"
+          priority
+        />
         <p className="mx-auto mb-8 max-w-lg text-lg text-text-muted md:text-xl">
           Music. Events. Culture.
         </p>
