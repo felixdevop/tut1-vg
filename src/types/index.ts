@@ -31,6 +31,7 @@ export interface EventItem {
   venue: string;
   location: string; // e.g. "Berlin, DE"
   ticketUrl?: string; // optional link to tickets
+  image?: string; // e.g. "/events/verzus-1.jpg"
 }
 
 export interface UserPreferences {

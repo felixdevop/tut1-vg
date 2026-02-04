@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { EventItem } from "@/types";
 
@@ -10,6 +11,7 @@ const UPCOMING_EVENTS: EventItem[] = [
     venue: "Postgarage 2nd",
     location: "Graz, AT",
     ticketUrl: "https://ra.co/events/123456",
+     image: "/events/krocher.png",  
   },
   {
     id: "evt-2",
@@ -18,6 +20,7 @@ const UPCOMING_EVENTS: EventItem[] = [
     venue: "Dom im Berg",
     location: "Graz, AT",
     ticketUrl: "https://ra.co/events/123456",
+    image: "/events/xmess-1.jpg",  // ← add this line
   },
   {
     id: "evt-3",
@@ -26,6 +29,7 @@ const UPCOMING_EVENTS: EventItem[] = [
     venue: "Postgarage 2nd",
     location: "Graz, AT",
     ticketUrl: "https://ra.co/events/123456",
+     image: "/events/5years-ta.png",  
   },
   // {
   //   id: "evt-4",
@@ -64,8 +68,19 @@ export default function EventsPage() {
           {UPCOMING_EVENTS.map((event) => (
             <div
               key={event.id}
-              className="rounded-xl border border-border bg-surface p-5 transition-colors hover:border-accent"
+              className="overflow-hidden rounded-xl border border-border bg-surface transition-colors hover:border-accent"
             >
+              {event.image && (
+                <div className="relative aspect-square w-full">
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
+              <div className="p-5">
               <p className="mb-1 text-sm font-medium text-accent">
                 {formatDate(event.date)}
               </p>
@@ -85,6 +100,7 @@ export default function EventsPage() {
                   Tickets &rarr;
                 </Link>
               )}
+              </div>
             </div>
           ))}
         </div>
