@@ -95,7 +95,7 @@ export default function EventsPage() {
                   href={event.ticketUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-block text-sm font-semibold text-accent hover:underline"
+                  className="mt-3 inline-block rounded-lg border border-accent px-4 py-2 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
                 >
                   Tickets &rarr;
                 </Link>
@@ -118,7 +118,7 @@ export default function EventsPage() {
           href="https://ra.co/promoters/116162"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-accent hover:underline"
+          className="inline-flex items-center gap-2 rounded-lg border border-accent px-5 py-2.5 font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
         >
           View all events on RA &rarr;
         </Link>
