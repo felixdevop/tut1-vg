@@ -24,7 +24,7 @@ const sampleGalleryItems: GalleryItem[] = [
  
   {
     id: "gal-4",
-    title: "Tokyo Drift: 1morning",
+    title: "VG NYC: Frankie Bones (S1Brooklyn)",
     embedUrl: "https://www.youtube.com/embed/Za1C2_a6Zb0?si=WtWpHPsvO0iDbrBd",
     platform: "youtube",
   },
