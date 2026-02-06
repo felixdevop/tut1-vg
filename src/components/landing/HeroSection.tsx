@@ -25,7 +25,7 @@ export default function HeroSection() {
           alt="violendgroove"
           width={600}
           height={150}
-          className="mx-auto mb-4 h-auto w-full max-w-md md:max-w-lg lg:-mt-20 lg:max-w-2xl"
+          className="mx-auto mb-4 h-auto w-full max-w-[273px] md:max-w-[310px] lg:-mt-8 lg:max-w-[413px]"
           priority
         />
         <p className="mx-auto mb-8 max-w-lg text-lg text-text-muted md:text-xl">
