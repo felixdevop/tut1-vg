@@ -33,7 +33,7 @@ export default function RootLayout({
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/80" />
+          <div className="absolute inset-0 bg-black/70" />
         </div>
 
         <CartProvider>

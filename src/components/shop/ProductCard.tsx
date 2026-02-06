@@ -61,7 +61,7 @@ export default function ProductCard({
           </span>
           <button
             onClick={() => addToCart(product)}
-            className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-hover"
+            className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-black transition-colors hover:bg-primary-hover"
           >
             Add to Cart
           </button>

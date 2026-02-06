@@ -31,7 +31,7 @@ export default function HeroSection() {
             href="https://leftkiss.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-primary px-8 py-3 font-semibold text-white transition-colors hover:bg-primary-hover"
+            className="rounded-lg bg-primary px-8 py-3 font-semibold text-black transition-colors hover:bg-primary-hover"
           >
             Shop Now
           </a>

@@ -73,7 +73,7 @@ export function CartSidebar() {
                 {formatPrice(totalPriceInCents)}
               </span>
             </div>
-            <button className="mb-2 w-full rounded-lg bg-primary py-3 font-semibold text-white transition-colors hover:bg-primary-hover">
+            <button className="mb-2 w-full rounded-lg bg-primary py-3 font-semibold text-black transition-colors hover:bg-primary-hover">
               Checkout
             </button>
             <button
