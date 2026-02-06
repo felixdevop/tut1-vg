@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import Navbar from "@/components/layout/Navbar";
@@ -23,6 +24,18 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.className} bg-bg text-text antialiased`}>
+        {/* Fixed backdrop */}
+        <div className="fixed inset-0 -z-10">
+          <Image
+            src="/gallery/vgbackdrop.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/80" />
+        </div>
+
         <CartProvider>
           <Navbar />
           <main className="min-h-screen">{children}</main>

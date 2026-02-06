@@ -3,16 +3,11 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-bg to-bg" />
-
-      {/* Animated glow */}
-      <div className="absolute left-1/2 top-1/3 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 blur-[128px]" />
+    <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden md:min-h-[90vh]">
 
       <div className="relative z-8 px-4 text-center">
         <Image
-          src="/gallery/vgheader.jpg"
+          src="/verzus/vzspring1.jpeg"
           alt="ViolendGroove"
           width={3000}
           height={2000}
