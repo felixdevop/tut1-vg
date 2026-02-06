@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import "./globals.css";
-import { CartProvider } from "@/context/CartContext";
 import Navbar from "@/components/layout/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -36,10 +35,8 @@ export default function RootLayout({
           <div className="absolute inset-0 bg-black/70" />
         </div>
 
-        <CartProvider>
-          <Navbar />
-          <main className="min-h-screen">{children}</main>
-        </CartProvider>
+        <Navbar />
+        <main className="min-h-screen">{children}</main>
       </body>
     </html>
   );

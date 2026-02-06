@@ -1,10 +1,13 @@
 import HeroSection from "@/components/landing/HeroSection";
+import FeaturedMerch from "@/components/landing/FeaturedMerch";
 import SectionCard from "@/components/landing/SectionCard";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
+
+      <FeaturedMerch />
 
       <section className="mx-auto max-w-7xl px-4 py-20">
         <div className="grid gap-6 md:grid-cols-3">

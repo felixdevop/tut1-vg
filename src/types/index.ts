@@ -1,21 +1,3 @@
-export interface Product {
-  id: string;
-  name: string;
-  description: string;
-  priceInCents: number;
-  image: string;
-  category: "merch" | "music" | "accessories";
-}
-
-export interface CartItem {
-  product: Product;
-  quantity: number;
-}
-
-export interface Cart {
-  items: CartItem[];
-}
-
 export interface GalleryItem {
   id: string;
   title: string;
@@ -32,8 +14,4 @@ export interface EventItem {
   location: string; // e.g. "Berlin, DE"
   ticketUrl?: string; // optional link to tickets
   image?: string; // e.g. "/events/verzus-1.jpg"
-}
-
-export interface UserPreferences {
-  favoriteProductIds: string[];
 }
