@@ -59,7 +59,7 @@ export default function EventsPage() {
           Events
         </h1>
         <p className="text-text-muted">
-          Upcoming shows and tickets for events near you.
+          Upcoming shows and tickets.
         </p>
       </div>
 
