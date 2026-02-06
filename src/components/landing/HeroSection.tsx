@@ -10,13 +10,22 @@ export default function HeroSection() {
       {/* Animated glow */}
       <div className="absolute left-1/2 top-1/3 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 blur-[128px]" />
 
-      <div className="relative z-10 px-4 text-center">
+      <div className="relative z-8 px-4 text-center">
+        <Image
+          src="/gallery/vgheader.jpg"
+          alt="ViolendGroove"
+          width={3000}
+          height={2000}
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="mx-auto mb-2 w-full rounded-lg object-cover md:mt-12 md:mb-4 md:max-w-3xl"
+          priority
+        />
         <Image
           src="/vglogo.svg"
           alt="violendgroove"
           width={600}
           height={150}
-          className="mx-auto mb-24 h-auto w-full max-w-xl md:max-w-2xl lg:max-w-4xl"
+          className="mx-auto mb-4 h-auto w-full max-w-md md:max-w-lg lg:-mt-20 lg:max-w-2xl"
           priority
         />
         <p className="mx-auto mb-8 max-w-lg text-lg text-text-muted md:text-xl">
