@@ -21,11 +21,11 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/vglogo.svg"
+            src="/VG.svg"
             alt="violendgroove"
             width={120}
             height={32}
-            className="mb-4 h-8 w-auto"
+            className="h-6 w-auto"
             priority
           />
         </Link>

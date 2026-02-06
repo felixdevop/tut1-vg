@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "violendgroove — Music. Beats. Culture.",
   description:
     "violendgroove — DJ, producer, and creative. Shop merch, explore the gallery, and find upcoming events.",
+  icons: {
+    icon: "/VG-favicon.svg",
+  },
 };
 
 export default function RootLayout({

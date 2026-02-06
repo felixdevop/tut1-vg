@@ -28,7 +28,7 @@ export default function HeroSection() {
           className="mx-auto mb-4 h-auto w-full max-w-[273px] md:max-w-[310px] lg:-mt-8 lg:max-w-[413px]"
           priority
         />
-        <p className="mx-auto mb-8 max-w-lg text-lg text-text-muted md:text-xl">
+        <p className="mx-auto mb-12 max-w-lg text-lg text-text-muted md:text-xl">
           Music. Events. Culture.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
