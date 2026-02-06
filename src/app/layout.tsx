@@ -27,7 +27,7 @@ export default function RootLayout({
         {/* Fixed backdrop */}
         <div className="fixed inset-0 -z-10">
           <Image
-            src="/gallery/vgbackdrop.jpg"
+            src="/verzus/vzspring3.jpeg"
             alt=""
             fill
             className="object-cover"
