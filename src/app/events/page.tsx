@@ -6,31 +6,31 @@ import type { EventItem } from "@/types";
 const UPCOMING_EVENTS: EventItem[] = [
   {
     id: "evt-1",
-    title: "Verzus Clubnight 1 2026",
+    title: "Oblivion Verzus Violendgroove",
     date: "2026-03-13",
-    venue: "Postgarage 2nd",
+    venue: "Postgarage 1st & 2nd",
     location: "Graz, AT",
-    ticketUrl: "https://ra.co/events/123456",
-     image: "/events/krocher.png",  
+    // ticketUrl: "https://ra.co/events/123456",
+    //  image: "/events/krocher.png",  
   },
   {
     id: "evt-2",
-    title: "Springfestival 2026 Verzus 2 2026",
-    date: "2026-05-23",
-    venue: "Dom im Berg",
+    title: "DJ Vibekiller Birthday Bash",
+    date: "2026-03-20",
+    venue: "GRNGR",
     location: "Graz, AT",
-    ticketUrl: "https://ra.co/events/123456",
-    image: "/events/xmess-1.jpg",  // ← add this line
+    // ticketUrl: "https://ra.co/events/123456",
+    // image: "/events/xmess-1.jpg",  
   },
-  {
-    id: "evt-3",
-    title: "Verzus Clubnight 3 2026",
-    date: "2026-10-03",
-    venue: "Postgarage 2nd",
-    location: "Graz, AT",
-    ticketUrl: "https://ra.co/events/123456",
-     image: "/events/5years-ta.png",  
-  },
+  // {
+  //   id: "evt-3",
+  //   title: "Verzus Clubnight 3 2026",
+  //   date: "2026-10-03",
+  //   venue: "Postgarage 2nd",
+  //   location: "Graz, AT",
+  //   ticketUrl: "https://ra.co/events/123456",
+  //    image: "/events/5years-ta.png",  
+  // },
   // {
   //   id: "evt-4",
   //   title: "Feuer & Peitsche #2",
@@ -120,7 +120,7 @@ export default function EventsPage() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-lg border border-accent px-5 py-2.5 font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
         >
-          View all events on RA &rarr;
+          View past events on RA &rarr;
         </Link>
       </div>
     </div>
