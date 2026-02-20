@@ -8,7 +8,7 @@ export default function HeroSection() {
       <div className="relative z-8 px-4 text-center">
         <Image
           src="/verzus/vzspring1.jpeg"
-          alt="ViolendGroove"
+          alt="violendgroove event photo"
           width={3000}
           height={2000}
           sizes="(max-width: 768px) 100vw, 800px"
