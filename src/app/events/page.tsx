@@ -1,6 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import type { EventItem } from "@/types";
+import { SITE_URL } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Events",
+  description: "Upcoming live shows and ticket links for violendgroove events in Graz and beyond.",
+  alternates: { canonical: "/events" },
+  openGraph: {
+    title: "Events | violendgroove",
+    description: "Upcoming live shows and ticket links for violendgroove events.",
+    url: `${SITE_URL}/events`,
+  },
+};
 
 // ── Manually maintained list of upcoming events ──────────────────────
 const UPCOMING_EVENTS: EventItem[] = [
@@ -54,6 +67,22 @@ function formatDate(iso: string): string {
 export default function EventsPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            UPCOMING_EVENTS.map((e) => ({
+              "@context": "https://schema.org",
+              "@type": "Event",
+              name: e.title,
+              startDate: e.date,
+              location: { "@type": "Place", name: e.venue, address: e.location },
+              url: e.ticketUrl ?? `${SITE_URL}/events`,
+              organizer: { "@type": "Organization", name: "violendgroove", url: SITE_URL },
+            }))
+          ),
+        }}
+      />
       <div className="mb-10">
         <h1 className="mb-2 text-4xl font-black tracking-tight text-text">
           Events

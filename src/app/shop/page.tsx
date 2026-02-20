@@ -1,5 +1,18 @@
+import type { Metadata } from "next";
 import { MERCH_PRODUCTS } from "@/lib/products";
 import MerchCard from "@/components/shop/MerchCard";
+import { SITE_URL } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Merch",
+  description: "Shop official violendgroove merchandise — scarves, hoodies, and caps. Available on leftkiss.com.",
+  alternates: { canonical: "/shop" },
+  openGraph: {
+    title: "Merch | violendgroove",
+    description: "Shop official violendgroove merchandise — scarves, hoodies, and caps.",
+    url: `${SITE_URL}/shop`,
+  },
+};
 
 export default function ShopPage() {
   return (

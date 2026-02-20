@@ -15,6 +15,8 @@ export default function HeroSection() {
           className="mx-auto mb-2 w-full rounded-lg object-cover md:mt-12 md:mb-4 md:max-w-3xl"
           priority
         />
+        {/* SEO: visually hidden h1 for screen readers and crawlers */}
+        <h1 className="sr-only">violendgroove</h1>
         <Image
           src="/vglogo.svg"
           alt="violendgroove"

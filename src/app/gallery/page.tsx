@@ -1,5 +1,18 @@
 import VideoGrid from "@/components/gallery/VideoGrid";
+import type { Metadata } from "next";
 import type { GalleryItem } from "@/types";
+import { SITE_URL } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Gallery",
+  description: "Watch DJ sets and mixes by violendgroove — YouTube video picks of live performances and highlights.",
+  alternates: { canonical: "/gallery" },
+  openGraph: {
+    title: "Gallery | violendgroove",
+    description: "Watch DJ sets and mixes by violendgroove.",
+    url: `${SITE_URL}/gallery`,
+  },
+};
 
 const sampleGalleryItems: GalleryItem[] = [
     {
