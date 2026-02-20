@@ -11,7 +11,7 @@ export default function ShopPage() {
         <p className="text-text-muted">
           Browse the collection. All purchases handled on{" "}
           <a
-            href="https://leftkiss.com/"
+            href="https://leftkiss.com/pages/violendgroove"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary underline underline-offset-2 hover:text-primary/80"

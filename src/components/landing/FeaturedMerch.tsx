@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MERCH_PRODUCTS } from "@/lib/products";
 import { getCategoryIcon } from "@/components/icons/MerchIcons";
 
@@ -9,9 +10,9 @@ export default function FeaturedMerch() {
           Merchandise
         </h2>
         <p className="text-text-muted">
-          Rep the groove. Available via{" "}
+          Available via{" "}
           <a
-            href="https://leftkiss.com/"
+            href="https://leftkiss.com/pages/violendgroove"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary underline underline-offset-2 hover:text-primary/80"
@@ -31,11 +32,21 @@ export default function FeaturedMerch() {
             rel="noopener noreferrer"
             className="group rounded-xl border border-border bg-surface transition-all hover:border-primary/50 hover:bg-surface-hover"
           >
-            {/* Gradient placeholder */}
-            <div className="flex aspect-[3/4] items-center justify-center rounded-t-xl bg-gradient-to-br from-white/5 to-white/10">
-              <div className="text-text-muted transition-colors group-hover:text-primary">
-                {getCategoryIcon(product.category, "h-16 w-16")}
-              </div>
+            <div className="relative aspect-[3/4] overflow-hidden rounded-t-xl bg-gradient-to-br from-white/5 to-white/10">
+              {product.image ? (
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover"
+                />
+              ) : (
+                <div className="flex h-full items-center justify-center">
+                  <div className="text-text-muted transition-colors group-hover:text-primary">
+                    {getCategoryIcon(product.category, "h-16 w-16")}
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="p-6">
@@ -55,7 +66,7 @@ export default function FeaturedMerch() {
 
       <div className="mt-10 text-center">
         <a
-          href="https://leftkiss.com/"
+          href="https://leftkiss.com/pages/violendgroove"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block rounded-lg bg-primary px-8 py-3 text-sm font-bold text-black transition-opacity hover:opacity-90"

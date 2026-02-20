@@ -12,9 +12,9 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 py-20">
         <div className="grid gap-6 md:grid-cols-3">
           <SectionCard
-            href="/shop"
+            href="https://leftkiss.com/pages/violendgroove"
             title="Shop"
-            description="Exclusive merch, vinyl, and accessories. Rep the groove."
+            description="Exclusive merch available on leftkiss."
             icon={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ export default function Home() {
           <SectionCard
             href="/gallery"
             title="Gallery"
-            description="Watch sets, listen to mixes, and experience the vibe."
+            description="Watch sets & listen to mixes."
             icon={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ export default function Home() {
           <SectionCard
             href="/events"
             title="Events"
-            description="Find us at a venue near you. Upcoming shows and tickets."
+            description="Upcoming shows and tickets."
             icon={
               <svg
                 xmlns="http://www.w3.org/2000/svg"

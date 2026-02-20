@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "https://leftkiss.com/", label: "Shop", external: true },
+  { href: "https://leftkiss.com/pages/violendgroove", label: "Shop", external: true },
   { href: "/gallery", label: "Gallery" },
   { href: "/events", label: "Events" },
 ];

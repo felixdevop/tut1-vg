@@ -28,7 +28,7 @@ export default function HeroSection() {
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a
-            href="https://leftkiss.com/"
+            href="https://leftkiss.com/pages/violendgroove"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-primary px-8 py-3 font-semibold text-black transition-colors hover:bg-primary-hover"
