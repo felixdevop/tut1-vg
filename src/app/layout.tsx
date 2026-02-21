@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Image from "next/image";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+import CookieBanner from "@/components/layout/CookieBanner";
 import { SITE_URL, SITE_NAME, SOCIAL_INSTAGRAM, SOCIAL_YOUTUBE } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -69,6 +70,7 @@ export default function RootLayout({
         />
         <Navbar />
         <main className="min-h-screen">{children}</main>
+        <CookieBanner />
       </body>
     </html>
   );
